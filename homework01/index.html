@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music player</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-      Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="page-header jumbotron">
+          <h1>Playlist - Javascript</h1>
+        </header>
+        <main class="panel panel-default">
+          <section id="controles" class="panel-body">
+            <audio id="audio" src="">
+        </audio>
+            <h2>Player</h2>
+            <h3 id="titulo">Nome da música</h3>
+            <div id="ctrlButtons">
+              <button data-action="prev" class="btCtrl btn btn-primary glyphicon glyphicon-step-backward"></button>
+              <button data-action="play" class="btCtrl btn btn-primary glyphicon glyphicon-play"></button>
+              <button data-action="next" class="btCtrl btn btn-primary glyphicon glyphicon-step-forward"></button>
+              <button data-action="stop" class="btCtrl btn btn-primary glyphicon glyphicon-stop"></button>
+            </div>
+          </section>
+          <section id="buscaMusicas" class="panel-body">
+            <h3>Adicione músicas à sua playlist:</h3>
+            <ul class="list-group" id="listaMusicas">
+              <li class="list-group-item">
+                <span>Música 01</span>
+                <button data-nome="Música 1" data-src="http://sample-videos.com/audio/mp3/crowd-cheering.mp3" class="btAdd btn">
+                  +
+                </button>
+              </li>
+              <li class="list-group-item">
+                <span>Música 02</span>
+                <button data-nome="Música 2" data-src="sirendub.mp3" class="btAdd btn">
+                  +
+                </button>
+              </li>
+              <li class="list-group-item">
+                <span>Música 03</span>
+                <button data-nome="Música 3" data-src="http://sample-videos.com/audio/mp3/crowd-cheering.mp3" class="btAdd btn">
+                  +
+                </button>
+              </li>
+              <li class="list-group-item">
+                <span>Música 04</span>
+                <button data-nome="Música 4" data-src="http://sample-videos.com/audio/mp3/crowd-cheering.mp3" class="btAdd btn">
+                  +
+                </button>
+              </li>
+              <li class="list-group-item">
+                <span>Música 05</span>
+                <button data-nome="Música 5" data-src="http://sample-videos.com/audio/mp3/crowd-cheering.mp3" class="btAdd btn">
+                  +
+                </button>
+              </li>
+            </ul>
+          </section>
+
+        </main>
+        <aside id="playlist" class="panel panel-default">
+          <h3>Playlist:</h3>
+          <ul class="list-group panel-body" id="ulPlaylist">
+
+          </ul>
+        </aside>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    </body>
+</html>
