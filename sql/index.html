@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Controle de Estoque - SQL Client</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <article class="container">
+                <header class="page-header">
+                  <h1 class="title">Exercício - Controle de Estoque - SQL Client </h1>
+                </header>
+                <section id="descricao" class="panel panel-primary">
+                  <h2>Instruções:</h2>
+                  <p>Utilizando javascript, crie um banco de dados para um controle de estoque simples, contendo as seguintes informações:</p>
+                  <ul class="">
+                    <li class="">id</li>
+                    <li class="">descricao</li>
+                    <li class="">quantidade</li>
+                    <li class="">valorUnitario</li>
+                  </ul>
+                  <p>Em seguida crie funções para inserir, ler e excluir registros nesse banco, utilizando a interface abaixo.</p>
+                  <p>Fique à vontade para alterar IDs e Classes.</p>
+                </section>
+                <main>
+                  <header>
+                    <h2>Sistema de controle de estoque</h2>
+                  </header>
+                  <section id="inserir">
+                    <header>
+                      <h3>Inserir</h3>
+                    </header>
+                    <form action="" id="insert" class="form">
+                      <input type="text" name="desc" placeholder="Descrição">
+                      <input type="text" name="qtd" placeholder="Quantidade">
+                      <input type="text" name="valor" placeholder="Valor unitário">
+                      <input type="submit" value="adicionar">
+                    </form>
+                  </section>
+                  <section id="listar" class="panel">
+                    <header>
+                      <h3>Lista de produtos</h3>
+                    </header>
+                    <table id="produtos" class="table table-striped">
+                      <thead>
+                        <tr>
+                          <td>Id</td>
+                          <td>Descrição</td>
+                          <td>Quantidade</td>
+                          <td>Valor unitário</td>
+                          <td>Ações</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>001</td>
+                          <td>Descrição do produto em questão</td>
+                          <td>03</td>
+                          <td>R$ 2,50</td>
+                          <td>
+                            <button>editar</button><button>excluir</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>002</td>
+                          <td>Descrição do produto em questão</td>
+                          <td>03</td>
+                          <td>R$ 2,50</td>
+                          <td>
+                            <button>editar</button><button>excluir</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>003</td>
+                          <td>Descrição do produto em questão</td>
+                          <td>03</td>
+                          <td>R$ 2,50</td>
+                          <td>
+                            <button>editar</button><button>excluir</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </section>
+                </main>
+              </article>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
