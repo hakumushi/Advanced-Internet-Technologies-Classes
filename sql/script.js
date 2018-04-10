@@ -1,19 +1,23 @@
+/*globals openDatabase, $*/
+'use strict';
+
 //criar o banco
+var dataBase = openDatabase("estoque", "1.0", "estoque", 1048576);
+var createTable = function () {
+    dataBase.transaction(function (tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS produto(id INTEGER PRIMARY KEY AUTOINCREMENT, descricao TEXT, quantidade INTEGER, valorUnitario REAL)', []);
+    });
+};
 
-var banco = openDatabase("estoque","1.0","estoque",1048576);
-var criarTabela = function(){
-  banco.transaction(function(tx){
-    tx.executeSql('CREATE TABLE IF NOT EXISTS produto(id INTEGER PRIMARY KEY AUTOINCREMENT, descricao TEXT, quantidade INTEGER, valorUnitario REAL)',[]);
-  });
-}
+createTable();
 
-criarTabela();
+var insertProduct = function (a, b, c) {
+    dataBase.transaction(function (tx) {
+        tx.executeSql('INSERT INTO produto (descricao, quantidade, valorUnitario) VALUES(?, ?, ?)', [a, b, c]);
+    });
+};
+
 /*
-var inserirLinhas = function(a,b){
-  banco.transaction(function(tx){
-    tx.executeSql('INSERT INTO produto VALUES(?,?, ?)',[a,b,c]);
-  });
-}
 var listar = function(){
   banco.transaction(function(tx){
     tx.executeSql('SELECT * FROM pessoa',[],function(tx,resposta){
@@ -23,20 +27,8 @@ var listar = function(){
     });
   });
 }
-
-
-var bt = document.getElementById("add");
-bt.addEventListener("click",function(){
-  var nome = document.getElementById("nome").value;
-  var email = document.getElementById("email").value;
-  inserirLinhas(nome,email);
-});
 */
 
-$("#insert").submit(function() {
-    var lol = $("input");
-    //var lol2 = $("input:second").val();
-    console.log(lol[0]);
+$("#submit").click(function () {
+    insertProduct($("#desc").val(), $("#qtd").val(), $("#val").val());
 });
-
-
